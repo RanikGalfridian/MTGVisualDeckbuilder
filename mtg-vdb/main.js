@@ -10,7 +10,7 @@ const {app, BrowserWindow, Menu} = require('electron')
   
   function createWindow () {
     // Create the browser window.
-    win = new BrowserWindow({width: 800, height: 600})
+    win = new BrowserWindow({width: 850, height: 500})
   
     // and load the index.html of the app.
     win.loadURL(url.format({
@@ -20,7 +20,7 @@ const {app, BrowserWindow, Menu} = require('electron')
     }))
   
     // Open the DevTools.
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
   
     // Emitted when the window is closed.
     win.on('closed', () => {
@@ -30,7 +30,7 @@ const {app, BrowserWindow, Menu} = require('electron')
       win = null
     })
 
-    var menu = Menu.buildFromTemplate([
+   /* var menu = Menu.buildFromTemplate([
         {
             label: 'Menu',
             submenu: [
@@ -50,9 +50,9 @@ const {app, BrowserWindow, Menu} = require('electron')
                 },
             ]
         }
-    ])
+    ])*/
 
-    Menu.setApplicationMenu(menu);
+    Menu.setApplicationMenu(null);
   }
   
   // This method will be called when Electron has finished
