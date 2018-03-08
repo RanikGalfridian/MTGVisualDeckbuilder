@@ -50,6 +50,7 @@
   padding: 0;
   box-sizing: content-box;
   border: 2px solid transparent;
+  outline: none;
 }
 
 #img_container .load_deck {
@@ -72,6 +73,7 @@
   padding: 0;
   box-sizing: content-box;
   border: 2px solid transparent;
+  outline: none;
 }
 
 .load_deck::before, .load_deck::after, .load_span::before, .load_span::after {
