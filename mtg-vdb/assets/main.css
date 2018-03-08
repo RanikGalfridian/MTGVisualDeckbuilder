@@ -1,0 +1,85 @@
+#img_container {
+  position: absolute;
+  background-image: url('./mtg-vdb_logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#img_container img {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#img_container .create_deck {
+  position: fixed;
+  top: 90%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#img_container .load_deck {
+  position: fixed;
+  top: 90%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#img_container .create_deck:hover, #img_container .load_deck:hover {
+  background-color: black;
+}
+
+#title-bar {
+  -webkit-app-region: drag !important;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: none;
+  margin: 0px;
+  z-index: 2;
+}
+
+#title-bar-btns {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: none;
+  margin: 0px;
+}
+
+#close_btn {
+  -webkit-app-region: no-drag;
+  color: rgb(49, 47, 47);
+  float: right;
+  font-size: 28px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+#close_btn:hover {
+  color: rgb(128, 128, 128);
+}
+
+html, * {
+  padding: 0;
+  margin: 0;
+}
