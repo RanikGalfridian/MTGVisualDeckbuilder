@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Beleren Bold';
+  src: url('./beleren-bold.ttf');
+}
+
 #img_container {
   position: absolute;
   background-image: url('./mtg-vdb_logo.png');
@@ -14,38 +19,160 @@
   border: none;
 }
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 #img_container .create_deck {
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
+  font-family: 'Beleren Bold';
   position: fixed;
   top: 90%;
   left: 25%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  color: #e7e7e9;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+  height: 75px;
+  background: none;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  padding: 0;
+  box-sizing: content-box;
+  border: 2px solid transparent;
 }
 
 #img_container .load_deck {
-  position: fixed;
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
+  font-family: 'Beleren Bold';
   top: 90%;
   left: 75%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  background: none;
+  color: #e7e7e9;
+  font-size: 20px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  position: fixed;
+  width: 150px;
+  height: 75px;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: content-box;
+  border: 2px solid transparent;
+}
+
+.load_deck::before, .load_deck::after, .load_span::before, .load_span::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.create_deck::before, .create_deck::after, .create_span::before, .create_span::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.create_deck::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transition: 0.5s all;
+}
+.create_deck::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transition: 0.5s all;
+}
+
+.load_deck::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transition: 0.5s all;
+}
+.load_deck::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transition: 0.5s all;
+}
+
+.create_span::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  transition: 0.5s all;
+}
+
+.create_deck:hover::before, .create_deck:hover::after {
+  width: 75px;
+  height: 50px;
+}
+
+.create_deck:hover .create_span::before, .create_deck:hover .create_span::after {
+  width: 75px;
+  height: 50px;
+}
+
+.load_deck:hover::before, .load_deck:hover::after {
+  width: 75px;
+  height: 50px;
+}
+
+.load_deck:hover .load_span::before, .load_deck:hover .load_span::after {
+  width: 75px;
+  height: 50px;
+}
+
+.create_span::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transition: 0.5s all;
+}
+
+.load_span::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  transition: 0.5s all;
+}
+.load_span::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transition: 0.5s all;
 }
 
 #img_container .create_deck:hover, #img_container .load_deck:hover {
-  background-color: black;
+  background-color: rgb(61, 61, 61);
 }
 
 #title-bar {
@@ -77,6 +204,7 @@
 
 #close_btn:hover {
   color: rgb(128, 128, 128);
+  cursor: pointer;
 }
 
 html, * {
