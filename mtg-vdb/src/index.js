@@ -1,4 +1,6 @@
-const {BrowserWindow} = require('electron').remote
+const {app, BrowserWindow} = require('electron').remote
+const url = require('url');
+const path = require('path');
 
 function closeWindow() {
   var window = BrowserWindow.getFocusedWindow();
