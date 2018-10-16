@@ -5,7 +5,7 @@
 
 #img_container {
   position: absolute;
-  background-image: url('./mtg-vdb_logo.png');
+  background-image: url('../images/mtg-vdb_logo.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
