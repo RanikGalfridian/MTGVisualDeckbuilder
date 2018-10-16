@@ -1,33 +1,28 @@
 import { app, BrowserWindow } from 'electron';
-import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
-import { enableLiveReload } from 'electron-compile';
+
+// Handle creating/removing shortcuts on Windows when installing/uninstalling.
+if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+  app.quit();
+}
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-const isDevMode = process.execPath.match(/[\\/]electron/);
-
-if (isDevMode) enableLiveReload({ strategy: 'react-hmr' });
-
-const createWindow = async () => {
+const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    frame: false,
-    width: 1200,
+    frame: false, 
+    width: 1200, 
     height: 630
   });
-
-  mainWindow.setResizable(false)
+  mainWindow.setResizable(false);
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   // Open the DevTools.
-  if (isDevMode) {
-    await installExtension(REACT_DEVELOPER_TOOLS);
-    mainWindow.webContents.openDevTools();
-  }
+  // mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
@@ -62,7 +57,3 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
-function closeWindw(){
-  var window = BrowserWindow.getFocusedWindow();
-  window.close();
-}
