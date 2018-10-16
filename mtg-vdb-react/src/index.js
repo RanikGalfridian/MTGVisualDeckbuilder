@@ -18,6 +18,8 @@ const createWindow = async () => {
     height: 630
   });
 
+  mainWindow.setResizable(false)
+
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
@@ -60,3 +62,7 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+function closeWindw(){
+  var window = BrowserWindow.getFocusedWindow();
+  window.close();
+}
