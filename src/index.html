@@ -6,15 +6,33 @@
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   </head>
   <body>
+    <!-- Home Page -->
     <div id="img_container">
       <div id="title-bar"> 
         <div id="title-bar-btns">
           <span class="fas fa-times" id="close_btn" onclick="closeWindow()"></span>
         </div>
       </div>
-      <button class="create_deck"><span href="tabletop.html" class="create_span">New Decklist</span></button>
+      <button class="create_deck" onclick="newDeck()"><span class="create_span">New Decklist</span></button>
       <button class="load_deck"><span class="load_span">Load Decklist</span></button>
     </div>
+    <!-- End Home Page -->
+
+    <!-- Tabletop -->
+    <div id="tabletop">
+      <div id="title-bar">
+        <div id="title-bar-btns">
+          <span class="fas fa-times" id="close_btn" onclick="closeWindow()"></span>
+        </div>
+      </div>
+      
+      <div>
+        Card Name:
+        <input type="text" name="search">
+      </div>
+    </div>
+    <!-- End Tabletop -->
+
     <script type="text/javascript" src="../assets/js/index.js"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@ const createWindow = () => {
     width: 1200, 
     height: 630
   });
-  //mainWindow.maximize();
+  mainWindow.maximize();
   mainWindow.setResizable(false);
 
   // and load the index.html of the app.

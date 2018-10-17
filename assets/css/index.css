@@ -213,3 +213,14 @@ html, * {
   padding: 0;
   margin: 0;
 }
+
+#tabletop {
+  display: none;
+  position: absolute;
+  background-image: url('../images/tabletop_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

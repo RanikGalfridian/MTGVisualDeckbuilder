@@ -6,6 +6,11 @@ function closeWindow() {
   window.close();
 }
 
+$('.create_deck').click(() => {
+  $('#img_container').css("display", "none");
+  $('#tabletop').css("display", "block");
+});
+
 document.onreadystatechange = () => {
   if (document.readState == "complete") {
     init();
